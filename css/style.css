@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+.tree{
+    position: absolute;
+    bottom: 130px;
+    animation: tree-animation 3s infinite linear;
+}
+.game-board {
+    width: 80%;
+    height: 500px;
+    border: 1px solid black;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background-image: url('../img/greenhill.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.sonic {
+    position: absolute;
+    width: 150px;
+    bottom: 100px;
+}
+
+.spike {
+    position: absolute;
+    bottom: 100px;
+    width: 80px;
+    /*left:99px;*/
+    animation: spikeAnimation 1.5s infinite linear;
+}
+
+.jump {
+    animation: SonicJump 500ms ease-out;
+}
+
+@keyframes spikeAnimation {
+    From {
+        right: -80px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes SonicJump {
+    0% {
+        bottom: 100px;
+    }
+    40% {
+        bottom: 200px;
+    }
+    50% {
+        bottom: 200px;
+    }
+    60% {
+        bottom: 200px;
+    }
+    100% {
+        bottom: 100px;
+    }
+}
+@keyframes tree-animation {
+    From{
+        right: -790px;
+    }
+    to{
+        right: 100%;
+    }
+}
