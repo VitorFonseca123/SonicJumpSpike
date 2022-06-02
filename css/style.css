@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: 0;
 }
+.pontos{
+    font-size: 50px;
+}
 .tree{
     position: absolute;
     bottom: 130px;
@@ -38,6 +41,7 @@
 
 .jump {
     animation: SonicJump 500ms ease-out;
+    /*animation: dash 500ms;*/
 }
 
 @keyframes deathSonic {
@@ -61,6 +65,7 @@
 @keyframes SonicJump {
     0% {
         bottom: 100px;
+        
     }
     40% {
         bottom: 200px;
