@@ -16,11 +16,17 @@ const loop = setInterval(() => {
     if (spikePosition <= 80 && sonicPosition < 160 && spikePosition > 0) {
         spike.style.animation = 'none';
         spike.style.left = `${spikePosition}px`;
-        sonic.style.animation = 'none';
         sonic.style.bottom = `${sonicPosition}px`;
-
         sonic.src = "./img/sonicDeath.png";
-
+        setTimeout(() => {
+            sonic.style.animation = 'deathSonic 500ms';
+            sonic.style.bottom = '-100px';
+        }, 500);
+       
+        
+        
+        
+        
         clearInterval(loop);
     }
 }, 10);
